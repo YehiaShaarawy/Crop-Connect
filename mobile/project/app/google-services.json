@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "754362212970",
+    "project_id": "cropconnect-19831",
+    "storage_bucket": "cropconnect-19831.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754362212970:android:7f4b6a8358d3c83fb56013",
+        "android_client_info": {
+          "package_name": "com.example.smart_agriculture_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpkviZ0Xya-kZ0mDpXGsW9pumX3fTGWCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
