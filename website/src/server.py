@@ -1,10 +1,16 @@
 from flask import Flask, render_template, request
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="./templates")
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/smartIrrigation')
+def smart_irrigation():
+    print("Serving smartIrrigation.html")
+    return render_template('smartIrrigation.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():

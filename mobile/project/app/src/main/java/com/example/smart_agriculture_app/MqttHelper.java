@@ -11,14 +11,14 @@ public class MqttHelper {
     private static final int BROKER_PORT = 8083; // Use 8883 for SSL
     private static final String USERNAME = "cropconnect1"; // Replace with your EMQX username
     private static final String PASSWORD = "cropconnect1"; // Replace with your EMQX password
-    private static final String CLIENT_ID = "mobileappclient";
+//    private static final String CLIENT_ID = "mqttx_a6f2064c";
     private Mqtt5AsyncClient mqttClient;
 
     public MqttHelper(){
         // Initialize the MQTT client with WebSocket
         mqttClient = MqttClient.builder()
                 .useMqttVersion5()
-                .identifier(CLIENT_ID)
+                .identifier("")
                 .serverHost(BROKER_HOST)
                 .serverPort(BROKER_PORT)
                 .webSocketConfig() // Enable WebSocket
@@ -30,6 +30,7 @@ public class MqttHelper {
     // Connect to the MQTT broker
     public void connectToBroker(MqttConnectionListener listener) {
         mqttClient.connectWith()
+                .cleanStart(true) // Ensure clean session
                 .simpleAuth()
                 .username(USERNAME)
                 .password(PASSWORD.getBytes()) // Convert password to bytes
@@ -74,6 +75,7 @@ public class MqttHelper {
                 .topic(topic)
                 .payload(message.getBytes()) // Convert message to bytes
                 .qos(MqttQos.AT_LEAST_ONCE)
+                .retain(true) // Retain the message on the broker
                 .send()
                 .whenComplete((publish, throwable) -> {
                     if (throwable != null) {

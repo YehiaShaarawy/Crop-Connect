@@ -42,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 mqttHelper.subscribeToTopic("smart_irrigation/pump_state", (topic, message) -> handleIncomingMessage(topic, message));
 
                 // Publish initial settings to threshold and irrigation mode topics
-                mqttHelper.publishMessage("smart_irrigation/threshold", "30");
-                mqttHelper.publishMessage("smart_irrigation/irrigation_mode", "always");
+//                mqttHelper.publishMessage("smart_irrigation/threshold", "30");
+//                mqttHelper.publishMessage("smart_irrigation/irrigation_mode", "always");
+//                mqttHelper.publishMessage("smart_irrigation/soil_moisture", "40");
             }
             @Override
             public void onConnectionFailed(Throwable throwable) {
@@ -72,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
             case "smart_irrigation/pump_state":
                 Log.d(TAG, "Pump state received: " + message);
-                if ("on".equalsIgnoreCase(message)) {
+                if ("ON".equalsIgnoreCase(message)) {
                     Log.d(TAG, "Pump is currently ON.");
-                } else if ("off".equalsIgnoreCase(message)) {
+                } else if ("OFF".equalsIgnoreCase(message)) {
                     Log.d(TAG, "Pump is currently OFF.");
                 }
                 break;

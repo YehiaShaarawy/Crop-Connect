@@ -23,11 +23,9 @@ body {
     align-items: center;
     position: absolute;
     padding: 1em 1em 1em 2em;
-    /* border-radius: 1em; */
     font-family: poppins;
     background-color: white;
     margin: 1.5em 15em;
-    /* border-bottom: 2px solid black; */
 }
 .navbar img {
     width: 100;
@@ -48,6 +46,8 @@ body {
     background-color: #183027;
     color: #ffedad;
     padding: 0.5em 0.5em;
+    cursor: not-allowed;
+    user-select: none;
 }
 .navbar
     .navbar-middle
@@ -68,8 +68,6 @@ section {
     display: flex;
     width: 100vw;
     height: 100vh;
-    /* padding-top: 15em; */
-    /* background: #1a1a1a; */
 }
 
 section:nth-child(2) {
@@ -92,23 +90,21 @@ section:nth-child(2) p{
 
 .heading-container {
     display: flex;
-    height: 50%; /* Full viewport height */
-    width: 67%; /* Full width */
+    height: 50%;
+    width: 67%;
     box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
     position: relative;
     z-index: 1;
-    /* background-color: #fff; */
 }
 
 .text-section {
-    flex: 1; /* Use one-half of the container */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 2em; /* Adjust padding for spacing */
+    padding: 2em;
     background-color: #fff;
-    /* border-radius: 2em 0 0 2em; */
     color: #000;
 }
 
@@ -129,19 +125,17 @@ section:nth-child(2) p{
 }
 
 .image-section {
-    flex: 1; /* Use one-half of the container */
-    background-image: url("{{ url_for('static', filename='imgs/headingImage.jpg') }}"); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
+    flex: 1;
+    background-image: url("{{ url_for('static', filename='imgs/headingImage.jpg') }}");
+    background-size: cover;
+    background-position: center;
 }
 
 section:nth-child(3) {
     display: flex;
     flex-direction: column;
     height: 90vh;
-    /* align-items: end; */
     align-items: center;
-    /* background: linear-gradient(to bottom, #183027 40%, #1a1a1a 20%); */
 }
 
 section:nth-child(3) .body-container {
@@ -149,15 +143,11 @@ section:nth-child(3) .body-container {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    /* justify-content: space-between; */
-    /* justify-content: center; */
-    /* align-items: center; */
 }   
 
 section:nth-child(3) .body-container .calculator-section{
-    background-color: #f9f9f9;
-    /* padding: 2em; */
-    border-radius: 1em;
+    /* background-color: #f9f9f9; */
+    /* border-radius: 1em; */
     margin: 0 10em 0 10em;
     font-family: poppins;
 }
@@ -200,7 +190,6 @@ section:nth-child(3) #foot2{
     left: 3em;
     top: 33em;
     max-width: 20em;
-    /* transform: scaleX(-1) rotate(250deg); */
 }
 
 section:nth-child(3) #foot3{
@@ -208,7 +197,6 @@ section:nth-child(3) #foot3{
     left: 24em;
     top: 63em;
     max-width: 20em;
-    /* transform: scaleX(-1) rotate(250deg); */
 }
 
 section:nth-child(3) form {
@@ -219,65 +207,57 @@ section:nth-child(3) form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    /* max-width: 1000px; */
     width: 30em;
-    height: 30em;
-    /* position: relative;
-    z-index: 1; */
+    height: 40em;
+    margin-top: 8.5em;
 }
 section:nth-child(3) h1 {
     text-align: center;
-    color: #333333;
+    margin-bottom: 20px;
+    color: #4CAF50;
 }
 section:nth-child(3) label {
     display: block;
     margin-bottom: 8px;
-    color: #555555;
+    font-size: 14px;
+    color: #666;
 }
-section:nth-child(3) input {
+section:nth-child(3) select,input {
     width: calc(100% - 20px);
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    font-size: 14px;
 }
 section:nth-child(3) button {
-    width: 100%;
-    padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 5px;
     font-size: 16px;
+    width: 100%;
     cursor: pointer;
-    position: relative;
+    transition: background-color 0.3s;
 }
 section:nth-child(3) button:hover {
     background-color: #45a049;
 }
-section:nth-child(3) button:hover::after {
-    content: "The carbon footprint represents the total greenhouse gas emissions caused by your activities.";
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-section:nth-child(3) p {
-    color: #333333;
+section:nth-child(3) .results {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 section:nth-child(3) .error {
     color: red;
     text-align: center;
+}
+section:nth-child(3) .info {
+    font-size: 12px;
+    color: #999;
 }
          </style>
     </head>
@@ -287,7 +267,7 @@ section:nth-child(3) .error {
             <span class="navbar-middle">
                 <ul class="navbar-middle-content">
                     <li class="navbar-middle-content-item1">
-                        <a href="">Smart Irrigation System</a>
+                        <a href="/smartIrrigation">Smart Irrigation System</a>
                     </li>
                     <li class="navbar-middle-content-item2">
                         <a>Carbon Footprint Calculator</a>
@@ -319,7 +299,18 @@ section:nth-child(3) .error {
                 <div class="calculator-section">
                     <form method="POST" action="/calculate">
                         <h1>Carbon Footprint Calculator</h1>
-                        <label for="current_emissions">Current CO2 Emissions (tons):</label>
+                
+                        <label for="ghg_type">Select Greenhouse Gas:</label>
+                        <select id="ghg_type" name="ghg_type" required>
+                            <option value="CO2" data-gwp="1">Carbon Dioxide (CO₂) (GWP = 1)</option>
+                            <option value="CH4" data-gwp="28">Methane (CH₄) (GWP = 28)</option>
+                            <option value="N2O" data-gwp="273">Nitrous Oxide (N₂O) (GWP = 273)</option>
+                            <option value="SF6" data-gwp="22800">Sulfur Hexafluoride (SF₆) (GWP = 22,800)</option>
+                            <option value="HFC-134a" data-gwp="1430">Hydrofluorocarbon HFC-134a (GWP = 1,430)</option>
+                            <option value="PFC" data-gwp="7390">Perfluorocarbon (PFC) (GWP = 7,390)</option>
+                            <option value="NF3" data-gwp="17200">Nitrogen Trifluoride (NF₃) (GWP = 17,200)</option>
+                        </select>
+                        <label for="current_emissions">Current Emissions (tons):</label>
                         <input type="number" step="any" id="current_emissions" name="current_emissions" required>
                 
                         <label for="renewable_percentage">Renewable Energy Use (%):</label>
@@ -328,12 +319,15 @@ section:nth-child(3) .error {
                         <button type="submit">Calculate</button>
                 
                         {% if baseline_footprint is not none and suggested_footprint is not none %}
-                            <h2>Results:</h2>
-                            <p>Baseline Carbon Footprint: {{ baseline_footprint }} tons</p>
-                            <p>Suggested Carbon Footprint: {{ suggested_footprint }} tons</p>
+                            <div class="results">
+                                <h2>Results</h2>
+                                <p><strong>Baseline Carbon Footprint:</strong> {{ baseline_footprint }} tons CO₂-equivalent</p>
+                                <p><strong>Suggested Carbon Footprint:</strong> {{ suggested_footprint }} tons CO₂-equivalent</p>
+                            </div>
                         {% elif error %}
                             <p class="error">{{ error }}</p>
                         {% endif %}
+                        <p class="info">GWP = Global Warming Potential. Values represent the effect of a gas relative to CO₂ over 100 years.</p>
                     </form>
                 </div>
                 <div class="about-section">
