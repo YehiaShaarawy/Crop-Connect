@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Smart_Agriculture_App</string>
+    <string-array name="irrigation_modes">
+        <item>daytime</item>
+        <item>always</item>
+    </string-array>
 </resources>

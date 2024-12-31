@@ -9,25 +9,25 @@
     tools:context=".HomepageActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/lightIntensityDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="25"
+        android:text="-"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.27000002" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/MoistureDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="80"
+        android:text="-"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -39,17 +39,40 @@
         app:layout_constraintVertical_bias="0.265" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/pumpStateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="50"
+        android:text="-"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.265" />
+
+    <Button
+        android:id="@+id/plantButton"
+        android:layout_width="106dp"
+        android:layout_height="117dp"
+        android:background="@drawable/custom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586" />
+
+    <Button
+        android:id="@+id/configureButton"
+        android:layout_width="149dp"
+        android:layout_height="62dp"
+        android:background="@drawable/custom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,21 +9,7 @@
     tools:context=".MyPlantActivity">
 
     <TextView
-        android:id="@+id/tempDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
-
-    <TextView
-        android:id="@+id/sunlightDisplay"
+        android:id="@+id/soilDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50"
@@ -37,7 +23,7 @@
         app:layout_constraintVertical_bias="0.848" />
 
     <TextView
-        android:id="@+id/humidityDisplay"
+        android:id="@+id/pumpDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50"
@@ -51,7 +37,7 @@
         app:layout_constraintVertical_bias="0.655" />
 
     <TextView
-        android:id="@+id/soilMoistureDisplay"
+        android:id="@+id/lightDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50"
