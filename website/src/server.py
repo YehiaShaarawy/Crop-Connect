@@ -15,8 +15,9 @@ def calculate():
     try:
         # Retrieve form data
         ghg_type = request.form['ghg_type']
-        current_emissions = float(request.form['current_emissions'])
-        renewable_percentage = float(request.form['renewable_percentage'])
+        power_usage = float(request.form['power_usage'])  # kWh
+        emission_factor = float(request.form['emission_factor'])  # kg CO2e/kWh
+        renewable_percentage = float(request.form['renewable_percentage'])  # %
 
         # Define GWP values for all GHGs
         gwp_values = {
@@ -31,7 +32,8 @@ def calculate():
 
         # Conversion to CO2-equivalents
         gwp = gwp_values.get(ghg_type, 1)
-        co2_equivalent_emissions = current_emissions * gwp
+        total_emissions = power_usage * emission_factor / 1000  # Convert kg to tons
+        co2_equivalent_emissions = total_emissions * gwp
 
         # Calculate baseline and suggested footprints
         baseline_footprint = co2_equivalent_emissions
@@ -40,7 +42,7 @@ def calculate():
 
         # Pass results to the template
         return render_template(
-            'index.html', 
+            'index.html',
             baseline_footprint=baseline_footprint,
             suggested_footprint=suggested_footprint
         )

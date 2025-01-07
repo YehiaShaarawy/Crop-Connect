@@ -4,266 +4,285 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Crop Connect</title>
-         <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
-body {
-    background-color: #183027;
-}
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                list-style: none;
+                text-decoration: none;
+            }
+            body {
+                background-color: #183027;
+            }
 
-.navbar {
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    padding: 1em 1em 1em 2em;
-    font-family: poppins;
-    background-color: white;
-    margin: 1.5em 15em;
-}
-.navbar img {
-    width: 100;
-    height: 70px;
-}
-.navbar .navbar-middle .navbar-middle-content {
-    display: flex;
-    justify-content: space-between;
-}
-.navbar .navbar-middle .navbar-middle-content .navbar-middle-content-item1 a {
-    margin-right: 1.2em;
-    background-color: #fee7a8;
-    padding: 0.5em 0.5em;
-    border-radius: 1em;
-}
-.navbar .navbar-middle .navbar-middle-content .navbar-middle-content-item2 a {
-    border-radius: 1em;
-    background-color: #183027;
-    color: #ffedad;
-    padding: 0.5em 0.5em;
-    cursor: not-allowed;
-    user-select: none;
-}
-.navbar
-    .navbar-middle
-    .navbar-middle-content
-    .navbar-middle-content-item2
-    a:hover {
-    color: "";
-}
-.navbar a {
-    color: #079245;
-    font-weight: 700;
-    transition: color 0.2s;
-}
-.navbar a:hover {
-    color: #645147;
-}
-section {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
+            .navbar {
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                padding: 1em 1em 1em 2em;
+                font-family: poppins;
+                background-color: white;
+                margin: 1.5em 15em;
+            }
+            .navbar img {
+                width: 100;
+                height: 70px;
+            }
+            .navbar .navbar-middle .navbar-middle-content {
+                display: flex;
+                justify-content: space-between;
+            }
+            .navbar
+                .navbar-middle
+                .navbar-middle-content
+                .navbar-middle-content-item1
+                a {
+                margin-right: 1.2em;
+                background-color: #fee7a8;
+                padding: 0.5em 0.5em;
+                border-radius: 1em;
+            }
+            .navbar
+                .navbar-middle
+                .navbar-middle-content
+                .navbar-middle-content-item2
+                a {
+                border-radius: 1em;
+                background-color: #183027;
+                color: #ffedad;
+                padding: 0.5em 0.5em;
+                cursor: not-allowed;
+                user-select: none;
+            }
+            .navbar
+                .navbar-middle
+                .navbar-middle-content
+                .navbar-middle-content-item2
+                a:hover {
+                color: "";
+            }
+            .navbar a {
+                color: #079245;
+                font-weight: 700;
+                transition: color 0.2s;
+            }
+            .navbar a:hover {
+                color: #645147;
+            }
+            section {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+            }
 
-section:nth-child(2) {
-    background: linear-gradient(to bottom, white 40%, #183027 20%);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+            section:nth-child(2) {
+                background: linear-gradient(to bottom, white 40%, #183027 20%);
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
 
-section:nth-child(2) p{
-    color: white;
-    font-family: poppins;
-    font-size: 2em;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 2em;
-    position: relative;
-    z-index: 1;
-}
+            section:nth-child(2) p {
+                color: white;
+                font-family: poppins;
+                font-size: 2em;
+                font-weight: 700;
+                text-align: center;
+                padding-top: 2em;
+                position: relative;
+                z-index: 1;
+            }
 
-.heading-container {
-    display: flex;
-    height: 50%;
-    width: 67%;
-    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-    position: relative;
-    z-index: 1;
-}
+            .heading-container {
+                display: flex;
+                height: 50%;
+                width: 67%;
+                box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+                position: relative;
+                z-index: 1;
+            }
 
-.text-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2em;
-    background-color: #fff;
-    color: #000;
-}
+            .text-section {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 2em;
+                background-color: #fff;
+                color: #000;
+            }
 
-.text-section h6 {
-    font-size: 1rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5em;
-    font-weight: normal;
-    font-family: poppins;
-}
+            .text-section h6 {
+                font-size: 1rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 0.5em;
+                font-weight: normal;
+                font-family: poppins;
+            }
 
-.text-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
-}
+            .text-section h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                line-height: 1.2;
+            }
 
-.image-section {
-    flex: 1;
-    background-image: url("{{ url_for('static', filename='imgs/headingImage.jpg') }}");
-    background-size: cover;
-    background-position: center;
-}
+            .image-section {
+                flex: 1;
+                background-image: url("{{ url_for('static', filename='imgs/headingImage.jpg') }}");
+                background-size: cover;
+                background-position: center;
+            }
 
-section:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
-    align-items: center;
-}
+            section:nth-child(3) {
+                display: flex;
+                flex-direction: column;
+                height: 90vh;
+                align-items: center;
+            }
 
-section:nth-child(3) .body-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}   
+            section:nth-child(3) .body-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+            }
 
-section:nth-child(3) .body-container .calculator-section{
-    /* background-color: #f9f9f9; */
-    /* border-radius: 1em; */
-    margin: 0 10em 0 10em;
-    font-family: poppins;
-}
+            section:nth-child(3) .body-container .calculator-section {
+                /* background-color: #f9f9f9; */
+                /* border-radius: 1em; */
+                margin: 0 10em 0 10em;
+                font-family: poppins;
+            }
 
-section:nth-child(3) .body-container .about-section .aboutText-section{
-   background-color: white;
-   margin-left: 8em;
-   padding: 2em;
-   font-size: 1.4em;
-   font-family: poppins;
-}  
+            section:nth-child(3)
+                .body-container
+                .about-section
+                .aboutText-section {
+                background-color: white;
+                margin-left: 8em;
+                padding: 2em;
+                font-size: 1.4em;
+                font-family: poppins;
+            }
 
-section:nth-child(3) .body-container .about-section p{
-    text-align: justify;
-}
+            section:nth-child(3) .body-container .about-section p {
+                text-align: justify;
+            }
 
-section:nth-child(3) .body-container .about-section h1::after{
-    content: ' ';
-    display: block;
-    width: 60px;
-    border-bottom: 5px solid #4CAF50;
-}
+            section:nth-child(3) .body-container .about-section h1::after {
+                content: " ";
+                display: block;
+                width: 60px;
+                border-bottom: 5px solid #4caf50;
+            }
 
-section:nth-child(3) .body-container .about-section h1{
-    text-align: start;
-    font-size: 2em;
-    padding-bottom: 1em;
-}
+            section:nth-child(3) .body-container .about-section h1 {
+                text-align: start;
+                font-size: 2em;
+                padding-bottom: 1em;
+            }
 
-section:nth-child(3) #foot{
-    position: absolute;
-    left: 3em;
-    top: 54em;
-    max-width: 20em;
-    transform: scaleX(-1) rotate(70deg);
-}
+            section:nth-child(3) #foot {
+                position: absolute;
+                left: 3em;
+                top: 52em;
+                max-width: 20em;
+                transform: scaleX(-1) rotate(70deg);
+            }
 
-section:nth-child(3) #foot2{
-    position: absolute;
-    left: 3em;
-    top: 33em;
-    max-width: 20em;
-}
+            section:nth-child(3) #foot2 {
+                position: absolute;
+                left: 3em;
+                top: 33em;
+                max-width: 20em;
+            }
 
-section:nth-child(3) #foot3{
-    position: absolute;
-    left: 24em;
-    top: 63em;
-    max-width: 20em;
-}
+            section:nth-child(3) #foot3 {
+                position: absolute;
+                left: 25em;
+                top: 60em;
+                max-width: 20em;
+            }
 
-section:nth-child(3) form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    width: 30em;
-    height: 40em;
-    margin-top: 8.5em;
-}
-section:nth-child(3) h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #4CAF50;
-}
-section:nth-child(3) label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #666;
-}
-section:nth-child(3) select,input {
-    width: calc(100% - 20px);
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-section:nth-child(3) button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-section:nth-child(3) button:hover {
-    background-color: #45a049;
-}
-section:nth-child(3) .results {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-section:nth-child(3) .error {
-    color: red;
-    text-align: center;
-}
-section:nth-child(3) .info {
-    font-size: 12px;
-    color: #999;
-}
-         </style>
+            section:nth-child(3) form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow:
+                    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                width: 30em;
+                height: 41em;
+                margin-top: 8.5em;
+            }
+            section:nth-child(3) h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #4caf50;
+            }
+            section:nth-child(3) label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: #666;
+            }
+            section:nth-child(3) select,
+            input {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 16px;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+            section:nth-child(3) button {
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                padding: 12px;
+                border-radius: 5px;
+                font-size: 16px;
+                width: 100%;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            section:nth-child(3) button:hover {
+                background-color: #45a049;
+            }
+            section:nth-child(3) .results {
+                margin-top: 20px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            section:nth-child(3) .error {
+                color: red;
+                text-align: center;
+            }
+            section:nth-child(3) .info {
+                font-size: 12px;
+                color: #999;
+            }
+        </style>
     </head>
     <body>
         <header class="navbar">
-            <a href="index.html"><img src="{{ url_for('static', filename='imgs/logo.png') }}" /></a>
+            <a href="index.html"
+                ><img src="{{ url_for('static', filename='imgs/logo.png') }}"
+            /></a>
             <span class="navbar-middle">
                 <ul class="navbar-middle-content">
                     <li class="navbar-middle-content-item1">
@@ -287,60 +306,140 @@ section:nth-child(3) .info {
                 <div class="image-section"></div>
             </div>
             <p>
-                Use our interactive calculator to learn your carbon footprint<br>
+                Use our interactive calculator to learn your carbon footprint<br />
                 and actions to take to reduce it.
             </p>
         </section>
         <section>
             <div class="body-container">
-                <img id="foot" src="{{ url_for('static', filename='imgs/footprint.png') }}">
-                <img id="foot2" src="{{ url_for('static', filename='imgs/footprint.png') }}">
-                <img id="foot3" src="{{ url_for('static', filename='imgs/footprint.png') }}">
+                <img
+                    id="foot"
+                    src="{{ url_for('static', filename='imgs/footprint.png') }}"
+                />
+                <img
+                    id="foot2"
+                    src="{{ url_for('static', filename='imgs/footprint.png') }}"
+                />
+                <img
+                    id="foot3"
+                    src="{{ url_for('static', filename='imgs/footprint.png') }}"
+                />
                 <div class="calculator-section">
                     <form method="POST" action="/calculate">
-                        <h1>Carbon Footprint Calculator</h1>
-                
+                        <h1>Power-Based Carbon Footprint Calculator</h1>
+
                         <label for="ghg_type">Select Greenhouse Gas:</label>
                         <select id="ghg_type" name="ghg_type" required>
-                            <option value="CO2" data-gwp="1">Carbon Dioxide (CO₂) (GWP = 1)</option>
-                            <option value="CH4" data-gwp="28">Methane (CH₄) (GWP = 28)</option>
-                            <option value="N2O" data-gwp="273">Nitrous Oxide (N₂O) (GWP = 273)</option>
-                            <option value="SF6" data-gwp="22800">Sulfur Hexafluoride (SF₆) (GWP = 22,800)</option>
-                            <option value="HFC-134a" data-gwp="1430">Hydrofluorocarbon HFC-134a (GWP = 1,430)</option>
-                            <option value="PFC" data-gwp="7390">Perfluorocarbon (PFC) (GWP = 7,390)</option>
-                            <option value="NF3" data-gwp="17200">Nitrogen Trifluoride (NF₃) (GWP = 17,200)</option>
+                            <option value="CO2" data-gwp="1">
+                                Carbon Dioxide (CO₂) (GWP = 1)
+                            </option>
+                            <option value="CH4" data-gwp="28">
+                                Methane (CH₄) (GWP = 28)
+                            </option>
+                            <option value="N2O" data-gwp="273">
+                                Nitrous Oxide (N₂O) (GWP = 273)
+                            </option>
+                            <option value="SF6" data-gwp="22800">
+                                Sulfur Hexafluoride (SF₆) (GWP = 22,800)
+                            </option>
+                            <option value="HFC-134a" data-gwp="1430">
+                                Hydrofluorocarbon HFC-134a (GWP = 1,430)
+                            </option>
+                            <option value="PFC" data-gwp="7390">
+                                Perfluorocarbon (PFC) (GWP = 7,390)
+                            </option>
+                            <option value="NF3" data-gwp="17200">
+                                Nitrogen Trifluoride (NF₃) (GWP = 17,200)
+                            </option>
                         </select>
-                        <label for="current_emissions">Current Emissions (tons):</label>
-                        <input type="number" step="any" id="current_emissions" name="current_emissions" required>
-                
-                        <label for="renewable_percentage">Renewable Energy Use (%):</label>
-                        <input type="number" step="any" id="renewable_percentage" name="renewable_percentage" required>
-                
+
+                        <label for="power_usage">Power Usage (kWh):</label>
+                        <input
+                            type="number"
+                            step="any"
+                            id="power_usage"
+                            name="power_usage"
+                            required
+                        />
+
+                        <label for="emission_factor"
+                            >Emission Factor (kg CO₂e/kWh):</label
+                        >
+                        <input
+                            type="number"
+                            step="any"
+                            id="emission_factor"
+                            name="emission_factor"
+                            required
+                        />
+
+                        <label for="renewable_percentage"
+                            >Renewable Energy Use (%):</label
+                        >
+                        <input
+                            type="number"
+                            step="any"
+                            id="renewable_percentage"
+                            name="renewable_percentage"
+                            required
+                        />
+
                         <button type="submit">Calculate</button>
-                
-                        {% if baseline_footprint is not none and suggested_footprint is not none %}
-                            <div class="results">
-                                <h2>Results</h2>
-                                <p><strong>Baseline Carbon Footprint:</strong> {{ baseline_footprint }} tons CO₂-equivalent</p>
-                                <p><strong>Suggested Carbon Footprint:</strong> {{ suggested_footprint }} tons CO₂-equivalent</p>
-                            </div>
+
+                        {% if baseline_footprint is not none and
+                        suggested_footprint is not none %}
+                        <div class="results">
+                            <h2>Results</h2>
+                            <p>
+                                <strong>Baseline Carbon Footprint:</strong> {{
+                                baseline_footprint }} tons CO₂-equivalent
+                            </p>
+                            <p>
+                                <strong>Suggested Carbon Footprint:</strong> {{
+                                suggested_footprint }} tons CO₂-equivalent
+                            </p>
+                        </div>
                         {% elif error %}
-                            <p class="error">{{ error }}</p>
+                        <p class="error">{{ error }}</p>
                         {% endif %}
-                        <p class="info">GWP = Global Warming Potential. Values represent the effect of a gas relative to CO₂ over 100 years.</p>
+                        <p class="info">
+                            Emission Factor = kg CO₂e per kWh. Adjust according
+                            to your region or source of electricity.
+                        </p>
                     </form>
                 </div>
                 <div class="about-section">
                     <div class="aboutText-section">
-                        <h1>What is carbon <br> footprint?</h1>
-                        <p>A carbon footprint is the total amount of greenhouse gases (including carbon dioxide and methane) that are generated by our actions.</p>
-                        <br>
-                        <p>The average carbon footprint for a person in the United States is 16 tons, one of the highest rates in the world. Globally, the average carbon footprint is closer to 4 tons. To have the best chance of avoiding a 2℃ rise in global temperatures, the average global carbon footprint per year needs to drop to under 2 tons by 2050.</p>
-                        <br>  
-                        <p>Lowering individual carbon footprints from 16 tons to 2 tons doesn't happen overnight! By making small changes to our actions, like eating less meat, taking fewer connecting flights and line drying our clothes, we can start making a big difference.</p>
+                        <h1>
+                            What is carbon <br />
+                            footprint?
+                        </h1>
+                        <p>
+                            A carbon footprint is the total amount of greenhouse
+                            gases (including carbon dioxide and methane) that
+                            are generated by our actions.
+                        </p>
+                        <br />
+                        <p>
+                            The average carbon footprint for a person in the
+                            United States is 16 tons, one of the highest rates
+                            in the world. Globally, the average carbon footprint
+                            is closer to 4 tons. To have the best chance of
+                            avoiding a 2℃ rise in global temperatures, the
+                            average global carbon footprint per year needs to
+                            drop to under 2 tons by 2050.
+                        </p>
+                        <br />
+                        <p>
+                            Lowering individual carbon footprints from 16 tons
+                            to 2 tons doesn't happen overnight! By making small
+                            changes to our actions, like eating less meat,
+                            taking fewer connecting flights and line drying our
+                            clothes, we can start making a big difference.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>  
+        </section>
     </body>
 </html>

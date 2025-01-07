@@ -31,28 +31,18 @@ public class HomepageActivity extends AppCompatActivity {
 
         plantButton = findViewById(R.id.plantButton);
         configureButton = findViewById(R.id.configureButton);
-
         lightIntensityDisplay = findViewById(R.id.lightIntensityDisplay);
         pumpStateDisplay = findViewById(R.id.pumpStateDisplay);
         MoistureDisplay = findViewById(R.id.MoistureDisplay);
 
-        // Initialize the MQTT Helper
         mqttHelper = new MqttHelper();
-        // Connect to the MQTT broker
         mqttHelper.connectToBroker(new MqttHelper.MqttConnectionListener() {
             @Override
             public void onConnected() {
                 Log.d(TAG, "Connected to MQTT broker!");
-
-                // Subscribe to soil moisture, light intensity, and pump state topics
                 mqttHelper.subscribeToTopic("smart_irrigation/soil_moisture", (topic, message) -> handleIncomingMessage(topic, message));
                 mqttHelper.subscribeToTopic("smart_irrigation/light_intensity", (topic, message) -> handleIncomingMessage(topic, message));
                 mqttHelper.subscribeToTopic("smart_irrigation/pump_state", (topic, message) -> handleIncomingMessage(topic, message));
-
-                // Publish initial settings to threshold and irrigation mode topics
-//                mqttHelper.publishMessage("smart_irrigation/threshold", "30");
-//                mqttHelper.publishMessage("smart_irrigation/irrigation_mode", "always");
-//                mqttHelper.publishMessage("smart_irrigation/soil_moisture", "40");
             }
             @Override
             public void onConnectionFailed(Throwable throwable) {
@@ -99,7 +89,6 @@ public class HomepageActivity extends AppCompatActivity {
             case "smart_irrigation/light_intensity":
                 Log.d(TAG, "Light intensity received: " + message);
                 int lightIntensity = Integer.parseInt(message);
-                // Ensure UI update runs on the main thread
                 runOnUiThread(() -> {
                     lightIntensityDisplay.setText(String.valueOf(lightIntensity));
                 });
@@ -135,7 +124,6 @@ public class HomepageActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Disconnect from the MQTT broker
         mqttHelper.disconnectFromBroker();
     }
 }
