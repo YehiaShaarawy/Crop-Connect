@@ -1,5 +1,7 @@
 # Crop Connect
- 
+## Mobile
+![Meet our team](https://github.com/user-attachments/assets/aee36c52-0b4d-4295-bde7-403db4a9314c)
+
 ## Website
 ### [1] Carbon Footprint Calculator
 ![SCR-20241214-dnhj](https://github.com/user-attachments/assets/a5275ce0-a28f-4029-9cc7-e10e6a06d248)
