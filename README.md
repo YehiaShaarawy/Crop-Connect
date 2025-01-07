@@ -1,4 +1,4 @@
-<img width="1680" alt="SCR-20250107-slgc" src="https://github.com/user-attachments/assets/470e6067-7f0a-47c2-849c-2680133ee074" /># Crop Connect
+# Crop Connect
  
 ## Website
 ### [1] Carbon Footprint Calculator
